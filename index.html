@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <title>The Global Youth Show — The World's Runway for the Next Generation</title>
-<meta name="description" content="The Global Youth Show is a global runway platform for young models aged 5-18. Applications open in London, New York, Dubai, Mumbai, Delhi NCR and Singapore.">
-<meta name="keywords" content="kids fashion week, child model runway show, young model auditions, kids modelling, children's fashion show">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The Global Youth Show">
-<meta property="og:description" content="A global runway platform for young models aged 5-18. Applications open.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+<meta content="The Global Youth Show is a global runway platform for young models aged 5-18. Applications open in London, New York, Dubai, Mumbai, Delhi NCR and Singapore." name="description"/>
+<meta content="kids fashion week, child model runway show, young model auditions, kids modelling, children's fashion show" name="keywords"/>
+<meta content="website" property="og:type"/>
+<meta content="The Global Youth Show" property="og:title"/>
+<meta content="A global runway platform for young models aged 5-18. Applications open." property="og:description"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;500;800&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{--wkfw-hd:67px}
 html{scroll-behavior:smooth}
@@ -32,14 +33,21 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 @media (max-width:939px){#mobile-menu[hidden]{display:none!important}}
 .asset-placeholder{user-select:none}
 .placeholder-texture{position:absolute;inset:-15%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.08),transparent 24%),linear-gradient(115deg,rgba(255,255,255,.03),transparent 35%,rgba(255,255,255,.04));transform:scale(1.05);}
-.talent-placeholder::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.24),transparent 40%,rgba(0,0,0,.05));}
+.featured-talent-gallery{display:flex;gap:clamp(12px,1.6vw,20px);overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scroll-padding-inline:2px;padding:0 0 14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#b9b9be transparent}
+.featured-talent-gallery::-webkit-scrollbar{height:5px}.featured-talent-gallery::-webkit-scrollbar-track{background:transparent}.featured-talent-gallery::-webkit-scrollbar-thumb{background:#b9b9be;border-radius:999px}
+.featured-talent-card{flex:0 0 clamp(240px,25vw,318px);min-width:0;margin:0;scroll-snap-align:start}
+.featured-talent-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e5e5e8}
+.featured-talent-media .talent-placeholder{position:absolute!important;inset:0!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#0b0b0c!important;transition:background-color .42s cubic-bezier(.22,.61,.36,1),transform .48s cubic-bezier(.22,.61,.36,1)!important}
+.featured-talent-media .talent-placeholder span{color:#f2f2f4!important}
+@media (hover:hover) and (pointer:fine){.featured-talent-card:hover .talent-placeholder{background:#7c3aed!important;transform:scale(1.018)}}
+@media (max-width:767px){.featured-talent-card{flex-basis:min(78vw,300px)}.featured-talent-gallery{gap:12px;padding-bottom:10px;scrollbar-width:none}.featured-talent-gallery::-webkit-scrollbar{display:none}}
 .arrow-icon{display:inline-block;line-height:1}
 .faq-chevron{width:15px;height:15px;display:block;flex:none;color:#1a1a1c;transform:rotate(0deg);transform-origin:50% 50%;transition:transform .24s cubic-bezier(.22,.61,.36,1);will-change:transform}
 [data-faq-toggle][aria-expanded="true"] .faq-chevron{transform:rotate(180deg)}
 .menu-icon{display:inline-block;font-size:18px;line-height:1}
 .why-link:hover .why-arrow{transform:rotate(-45deg)!important}
 [data-faq-item] [data-faq-answer]{will-change:grid-template-rows,opacity}
-.experience-card{will-change:transform}
+.experience-card{will-change:transform,filter,opacity;transform-origin:50% 0;transition:box-shadow .3s ease!important}
 .ghl-hover-1:hover{color:#1a1a1c;border-color:#1a1a1c}.ghl-hover-2:hover{color:#1a1a1c;border-color:#1a1a1c}.ghl-hover-3:hover{color:#1a1a1c;border-color:#1a1a1c}.ghl-hover-4:hover{background:#1a1a1c;color:#fafafa}.ghl-hover-5:hover{background:#f5f5f6}.ghl-hover-6:hover{background:#1a1a1c;color:#fafafa}.ghl-hover-7:hover{color:#1a1a1c}.ghl-hover-8:hover{transform:translateY(-4px)}.ghl-hover-9:hover{transform:translateY(-4px)}.ghl-hover-10:hover{transform:translateY(-4px)}.ghl-hover-11:hover{transform:translateY(-4px)}.ghl-hover-12:hover{transform:translateY(-4px)}.ghl-hover-13:hover{background:#1a1a1c;color:#fafafa;gap:20px}.ghl-hover-14:hover{color:#1a1a1c}.ghl-hover-15:hover{color:#1a1a1c}.ghl-hover-16:hover{color:#1a1a1c}.ghl-hover-17:hover{color:#1a1a1c}.ghl-hover-18:hover{color:#1a1a1c}.ghl-hover-19:hover{color:#1a1a1c}.ghl-hover-20:hover{color:#1a1a1c}.ghl-hover-21:hover{color:#1a1a1c}.ghl-hover-22:hover{color:#1a1a1c}.ghl-hover-23:hover{color:#1a1a1c}.ghl-hover-24:hover{color:#1a1a1c}.ghl-hover-25:hover{color:#1a1a1c}.ghl-hover-26:hover{color:#1a1a1c}.ghl-hover-27:hover{color:#1a1a1c}.ghl-hover-28:hover{color:#1a1a1c}.ghl-hover-29:hover{color:#1a1a1c}.ghl-hover-30:hover{background:#f5f5f6}.ghl-hover-31:hover{background:#f5f5f6}.ghl-hover-32:hover{background:#f5f5f6}.ghl-hover-33:hover{background:#f5f5f6}.ghl-hover-34:hover{background:#f5f5f6}.ghl-hover-35:hover{background:#fafafa;color:#1a1a1c}.ghl-hover-36:hover{color:#1a1a1c}.ghl-hover-37:hover{color:#1a1a1c}.ghl-hover-38:hover{color:#1a1a1c}.ghl-hover-39:hover{color:#1a1a1c}.ghl-hover-40:hover{color:#1a1a1c}.ghl-hover-41:hover{color:#1a1a1c}.ghl-hover-42:hover{color:#1a1a1c}.ghl-hover-43:hover{color:#1a1a1c}.ghl-hover-44:hover{color:#1a1a1c}.ghl-hover-45:hover{color:#1a1a1c}.ghl-hover-46:hover{color:#1a1a1c}.ghl-hover-47:hover{color:#1a1a1c}.ghl-hover-48:hover{color:#1a1a1c}.ghl-hover-49:hover{color:#1a1a1c}.ghl-hover-50:hover{color:#1a1a1c}.ghl-hover-51:hover{color:#1a1a1c}.ghl-hover-52:hover{background:rgba(255,255,255,.14);border-color:#ffffff;gap:20px}.ghl-hover-53:hover{color:#1a1a1c}.ghl-hover-54:hover{color:#1a1a1c}.ghl-hover-55:hover{color:#1a1a1c}.ghl-hover-56:hover{color:#1a1a1c}.ghl-hover-57:hover{color:#1a1a1c}
 
 /* --- Interaction fidelity pass: scroll-reading copy + animated CTAs --- */
@@ -153,37 +161,38 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 
   main>section:first-child{height:72svh!important;min-height:430px!important;max-height:720px!important}
   .hero-media{transform:none!important;opacity:1!important;will-change:auto!important}
-  main>section:first-child+div{grid-template-columns:1fr!important;gap:22px!important;padding-top:30px!important}
-  main>section:first-child+div>div{align-items:stretch!important;text-align:left!important}
-  main>section:first-child+div .ghl-hover-6{width:100%;justify-content:space-between;padding:16px 18px!important;border-radius:10px!important}
+  .story-cta-row{align-items:stretch!important;flex-direction:column!important;padding-top:28px!important;gap:10px!important}
+  .story-apply-cta{width:100%!important;justify-content:space-between!important;padding:16px 18px!important;border-radius:10px!important}
+  .story-cta-support{font-size:11px!important;line-height:1.45!important}
 
   #story{padding-top:62px!important}
-  #story h1{font-size:clamp(39px,12.4vw,60px)!important;line-height:.96!important;max-width:11ch!important}
+  #story h1{font-size:clamp(32px,9.6vw,44px)!important;line-height:1!important;max-width:18ch!important}
   #story [data-scrub]{font-size:15px!important;line-height:1.65!important}
 
   #gets{padding-top:36px!important;overflow:visible!important}
-  #gets h2{font-size:clamp(32px,9.3vw,46px)!important;line-height:1.01!important;max-width:12ch}
+  #gets>div:first-child{width:100%!important}
+  #gets>div:first-child>div{width:100%!important;min-width:0!important}
+  #gets h2{font-size:clamp(32px,9.3vw,46px)!important;line-height:1.01!important;max-width:none!important;width:100%!important;text-wrap:balance!important}
   #gets>div:last-child{margin-top:32px!important;padding-bottom:16px!important;overflow:visible!important}
 
-  /* Mobile stack: one consistent physical card; copy length changes runway, not card size. */
-  #gets{--gys-card-h:min(560px,calc(100svh - var(--mobile-stack-top,76px) - 18px))}
+  /* Mobile stack: every card is deliberately the exact same physical height. */
   #gets [data-stack]{
     position:sticky!important;top:var(--mobile-stack-top)!important;
-    height:var(--gys-card-h)!important;min-height:0!important;max-height:none!important;
+    height:420px!important;min-height:420px!important;max-height:420px!important;
     display:flex!important;flex-direction:column!important;
-    padding:24px 20px 27px!important;margin:0!important;overflow:hidden!important;
+    padding:21px 18px 22px!important;margin:0!important;overflow:hidden!important;
     border-radius:18px!important;
     box-shadow:0 14px 40px rgba(20,20,24,.08)!important;
     transform-origin:50% 0%;will-change:transform,filter!important;
     transition:box-shadow .3s ease!important;
   }
-  #gets [data-stack]>div{display:flex!important;flex-direction:column!important;gap:10px!important;min-width:0!important}
+  #gets [data-stack]>div{display:flex!important;flex-direction:column!important;gap:8px!important;min-width:0!important;width:100%!important}
   #gets [data-stack]>div:first-child{flex:0 0 auto!important}
-  #gets [data-stack]>div+div{margin-top:auto!important;padding-top:18px!important;gap:12px!important;flex:0 0 auto!important}
-  #gets [data-stack] span[data-reveal]{font-size:40px!important;line-height:.92!important}
-  #gets [data-stack] h3{font-size:clamp(27px,7.8vw,34px)!important;line-height:1.01!important;letter-spacing:-.02em!important}
-  #gets [data-stack] p:not([data-scrub]){font-size:14px!important;line-height:1.42!important}
-  #gets [data-stack] [data-scrub]{font-size:14.5px!important;line-height:1.52!important}
+  #gets [data-stack]>div+div{margin-top:auto!important;padding-top:14px!important;gap:9px!important;flex:0 0 auto!important;width:100%!important}
+  #gets [data-stack] span[data-reveal]{font-size:36px!important;line-height:.94!important}
+  #gets [data-stack] h3{font-size:clamp(26px,7.4vw,32px)!important;line-height:1.01!important;letter-spacing:-.02em!important}
+  #gets [data-stack] .experience-hook{font-size:17px!important;line-height:1.28!important;max-width:none!important;width:100%!important;text-wrap:pretty!important}
+  #gets [data-stack] [data-scrub]{font-size:14.5px!important;line-height:1.48!important;opacity:1!important;max-width:none!important;width:100%!important}
   #gets [data-stack-spacer]{display:block!important;min-height:0!important;margin:0!important;padding:0!important;pointer-events:none!important}
   #gets [data-stack-anchor]{display:block!important;height:0!important;overflow:hidden!important;pointer-events:none!important}
 
@@ -199,8 +208,9 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
   .footer-shell{padding:54px 20px max(24px,env(safe-area-inset-bottom))}
   .footer-mast{grid-template-columns:1fr;gap:26px;padding-bottom:36px}
   .footer-wordmark{font-size:clamp(34px,10.5vw,46px);line-height:.9;max-width:9ch}
-  .footer-intro{font-size:14px;margin-bottom:18px}
-  .footer-email{width:100%;padding:16px 17px}
+  .footer-mast>div{width:100%;min-width:0}
+  .footer-intro{font-size:14px;margin-bottom:18px;max-width:none;width:100%}
+  .footer-email{width:100%;max-width:none;padding:16px 17px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:34px 22px;padding:30px 0 34px}
   .footer-grid>div:first-child{grid-column:1/-1}
   .footer-cities{grid-template-columns:1fr;gap:9px}
@@ -212,20 +222,19 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
   header>div:first-child{padding-left:16px!important;padding-right:16px!important}
   main>section[style*="max-width:1240px"],main>div[style*="max-width:1240px"]{padding-left:16px!important;padding-right:16px!important}
   .mobile-menu-inner{padding-left:18px;padding-right:18px}
-  #gets [data-stack]{padding:22px 17px 25px!important;border-radius:16px!important}
+  #gets [data-stack]{padding:20px 16px 21px!important;border-radius:16px!important}
   .footer-shell{padding-left:16px;padding-right:16px}
 }
 
 @media (max-width:360px) and (max-height:640px){
   :root{--mobile-stack-top:68px}
-  #gets{--gys-card-h:calc(100svh - var(--mobile-stack-top,68px) - 14px)}
-  #gets [data-stack]{padding:17px 14px 18px!important;border-radius:14px!important}
-  #gets [data-stack]>div{gap:7px!important}
-  #gets [data-stack]>div+div{padding-top:10px!important;gap:8px!important}
+  #gets [data-stack]{height:405px!important;min-height:405px!important;max-height:405px!important;padding:16px 14px 17px!important;border-radius:14px!important}
+  #gets [data-stack]>div{gap:6px!important}
+  #gets [data-stack]>div+div{margin-top:auto!important;padding-top:10px!important;gap:7px!important}
   #gets [data-stack] span[data-reveal]{font-size:32px!important}
   #gets [data-stack] h3{font-size:24px!important;line-height:1!important}
-  #gets [data-stack] p:not([data-scrub]){font-size:12.8px!important;line-height:1.35!important}
-  #gets [data-stack] [data-scrub]{font-size:13.2px!important;line-height:1.42!important}
+  #gets [data-stack] .experience-hook{font-size:14.5px!important;line-height:1.24!important;max-width:none!important;width:100%!important}
+  #gets [data-stack] [data-scrub]{font-size:13.2px!important;line-height:1.42!important;opacity:1!important}
 }
 
 @media (hover:none) and (pointer:coarse){
@@ -249,7 +258,6 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
   FORM/BACKEND:
   The final Apply CTA currently uses the source mailto link. GHL can replace that href or embed a GHL form/workflow.
 -->
-
 <div style="background:#fafafa;min-height:100vh;overflow-x:clip">
 <header style="position:sticky;top:0;z-index:60;background:rgba(250,250,250,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #e8e8ea">
 <div style="max-width:1240px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px">
@@ -264,46 +272,46 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <a class="ghl-hover-3" data-scroll="#why" href="#" style="font:500 12px/1 Inter,sans-serif;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;color:#4a4a4f;transition:color .25s ease,border-color .25s ease">FAQ</a>
 </nav>
 <a class="ghl-hover-4" data-scroll="#apply" href="#" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:1px solid #1a1a1c;border-radius:8px;color:#1a1a1c;background:transparent;font:500 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s ease,color .3s ease">Apply now</a>
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" data-nav="mobile-btn" id="mobile-menu-button" type="button"><span class="hamburger" aria-hidden="true"><span></span><span></span></span></button>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" data-nav="mobile-btn" id="mobile-menu-button" type="button"><span aria-hidden="true" class="hamburger"><span></span><span></span></span></button>
 </div>
 </header>
 <div aria-hidden="true" class="mobile-menu-panel" id="mobile-menu">
-  <div class="mobile-menu-inner">
-    <p class="mobile-menu-kicker">Explore the show</p>
-    <nav class="mobile-menu-nav" aria-label="Mobile navigation">
-      <a class="mobile-menu-link" data-scroll="#story" href="#story"><span class="mobile-menu-index">01</span><span class="mobile-menu-name">Story</span><span class="mobile-menu-arrow" aria-hidden="true">→</span></a>
-      <a class="mobile-menu-link" data-scroll="#gets" href="#gets"><span class="mobile-menu-index">02</span><span class="mobile-menu-name">Six experiences</span><span class="mobile-menu-arrow" aria-hidden="true">→</span></a>
-      <a class="mobile-menu-link" data-scroll="#why" href="#why"><span class="mobile-menu-index">03</span><span class="mobile-menu-name">FAQ</span><span class="mobile-menu-arrow" aria-hidden="true">→</span></a>
-    </nav>
-    <a class="mobile-menu-apply" data-scroll="#apply" href="#apply"><span>Apply now</span><span aria-hidden="true">→</span></a>
-    <p class="mobile-menu-note">Ages 5–18 · High Fashion · Global Cities</p>
-  </div>
+<div class="mobile-menu-inner">
+<p class="mobile-menu-kicker">Explore the show</p>
+<nav aria-label="Mobile navigation" class="mobile-menu-nav">
+<a class="mobile-menu-link" data-scroll="#story" href="#story"><span class="mobile-menu-index">01</span><span class="mobile-menu-name">Story</span><span aria-hidden="true" class="mobile-menu-arrow">→</span></a>
+<a class="mobile-menu-link" data-scroll="#gets" href="#gets"><span class="mobile-menu-index">02</span><span class="mobile-menu-name">Six experiences</span><span aria-hidden="true" class="mobile-menu-arrow">→</span></a>
+<a class="mobile-menu-link" data-scroll="#why" href="#why"><span class="mobile-menu-index">03</span><span class="mobile-menu-name">FAQ</span><span aria-hidden="true" class="mobile-menu-arrow">→</span></a>
+</nav>
+<a class="mobile-menu-apply" data-scroll="#apply" href="#apply"><span>Apply now</span><span aria-hidden="true">→</span></a>
+<p class="mobile-menu-note">High Fashion | Global Cities &amp; Networks</p>
+</div>
 </div>
 <main>
 <section style="position:relative;height:min(calc(100svh - var(--wkfw-hd,67px)),940px);min-height:440px;background:#0b0b0c;overflow:hidden">
-<div aria-label="Hero media placeholder" class="hero-media asset-placeholder hero-placeholder" data-asset="hero-media" style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#171719;overflow:hidden;transform-origin:center center;will-change:transform,opacity"><span style="position:relative;z-index:2;font:500 10px/1 Inter,sans-serif;letter-spacing:.18em;color:rgba(255,255,255,.42);text-transform:uppercase">HERO VIDEO / IMAGE PLACEHOLDER</span><span aria-hidden="true" class="placeholder-texture"></span></div>
+<div aria-label="Hero media placeholder" class="hero-media asset-placeholder hero-placeholder" data-asset="hero-media" style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#171719;overflow:hidden;transform-origin:center center;will-change:transform,opacity">
+<div style="position:relative;z-index:2;width:min(900px,88vw);padding:28px;text-align:center">
+<span style="display:block;font:500 10px/1 Inter,sans-serif;letter-spacing:.18em;color:rgba(255,255,255,.46);text-transform:uppercase">Video opening frame</span>
+<p style="margin:18px auto 0;max-width:24ch;font:400 clamp(28px,5.2vw,70px)/1.02 'Bodoni Moda',serif;letter-spacing:-.02em;color:#f7f7f8;text-wrap:balance">It is not just about the runway. It's who they become through the experience.</p>
+<span style="display:block;margin-top:18px;font:500 9px/1.35 Inter,sans-serif;letter-spacing:.14em;color:rgba(255,255,255,.36);text-transform:uppercase">Start the final hero video with this statement</span>
+</div>
+<span aria-hidden="true" class="placeholder-texture"></span></div>
 <div style="position:absolute;inset:0;background:linear-gradient(rgba(11,11,12,.34) 0%,rgba(11,11,12,0) 26%,rgba(11,11,12,0) 52%,rgba(11,11,12,.82) 100%);pointer-events:none"></div>
 <div style="position:absolute;left:0;right:0;bottom:0;padding:0 clamp(20px,4vw,44px) clamp(34px,5vh,56px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px">
 </div>
 </section>
-<div data-reveal="" style="max-width:1240px;margin:0 auto;padding:clamp(28px,3.5vw,44px) 28px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,64px);align-items:center">
-<p style="margin: 0; font: 400 clamp(20px,2.2vw,30px)/1.18 'Bodoni Moda',serif; letter-spacing: -.015em; color: #1a1a1c; text-wrap: balance">It is not just about the runway. It's who they become through the experience.</p>
-<div style="display:flex;flex-direction:column;align-items:flex-end;text-align:right;gap:12px">
-<a class="ghl-hover-6" data-scroll="#apply" href="#" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border:1px solid #1a1a1c;border-radius:8px;color:#1a1a1c;font:500 12px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .3s ease,color .3s ease">Apply now <span aria-hidden="true" class="arrow-icon" style="font-size:15px">→</span></a>
-<span style="font:400 12px/1.5 Inter,sans-serif;color:#6e6e73">Ages 5–18  |  High Fashion  |  Global Cities</span>
-</div>
-</div>
 <section id="story" style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) 28px 0;scroll-margin-top:100px">
-<h1 style="margin:0;max-width:17ch;font:400 clamp(42px,8vw,110px)/0.94 'Bodoni Moda',serif;letter-spacing:-.025em;color:#1a1a1c;text-wrap:balance">The world's runway for the next generation.</h1>
+<h1 style="margin:0;max-width:21ch;font:400 clamp(34px,5.4vw,72px)/0.98 'Bodoni Moda',serif;letter-spacing:-.022em;color:#1a1a1c;text-wrap:balance">The world's runway for the next generation.</h1>
 <div style="margin-top:clamp(32px,4vw,54px)">
 <p data-scrub="" style="margin:0;font:400 clamp(15px,1.4vw,18px)/1.62 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">The Global Youth Show is a premium global platform for young people aged 5 to 18 years old, created to build confidence, life skills, self-presentation and a broader perspective through the exciting world of high fashion. Join us on this journey of empowering our next generation to step boldly into the future.</p>
 </div>
 </section>
-<div data-reveal="" style="max-width:1240px;margin:0 auto;padding:clamp(28px,3.5vw,44px) 28px 0;display:flex">
-<a class="why-link ghl-hover-7" data-scroll="#why" href="#" style="display:inline-flex;align-items:center;gap:10px;padding:4px 0;border:0;color:#4a4a4f;font:500 12px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:color .3s ease">How we work <span aria-hidden="true" class="arrow-icon why-arrow" style="font-size:15px;transition:transform .35s cubic-bezier(.22,.61,.36,1);transform:rotate(90deg)">→</span></a>
+<div class="story-cta-row" data-reveal="" style="max-width:1240px;margin:0 auto;padding:clamp(30px,4vw,52px) 28px 0;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:10px">
+<a class="ghl-hover-6 story-apply-cta" data-scroll="#apply" href="#" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border:1px solid #1a1a1c;border-radius:8px;color:#1a1a1c;font:500 12px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .3s ease,color .3s ease">Apply now <span aria-hidden="true" class="arrow-icon" style="font-size:15px">→</span></a>
+<span class="story-cta-support" style="font:400 12px/1.5 Inter,sans-serif;color:#6e6e73">High Fashion | Global Cities &amp; Networks</span>
 </div>
 <section id="gets" style="max-width:1240px;margin:0 auto;padding:clamp(28px,3.5vw,48px) 28px 0;scroll-margin-top:100px">
-<div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px">
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px">
 <div>
 <p style="margin:0 0 16px;font:500 11px/1 Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6e6e73">The experience</p>
 <h2 style="margin: 0; font: 400 clamp(28px,4vw,50px)/1.04 'Bodoni Moda',serif; letter-spacing: -.02em; color: #1a1a1c; text-wrap: balance">Six experiences that shape who they become.</h2>
@@ -312,72 +320,72 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <div style="margin-top:clamp(32px,4vw,56px);padding-bottom:clamp(24px,3vw,44px)">
 <article class="experience-card" data-stack="" style="position:sticky;top:104px;z-index:1;background:#fdfdfd;border:1px solid #d4d4d8;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.08);padding:clamp(28px,3.4vw,46px);min-height:clamp(430px,56vh,500px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,56px);align-content:start;transition:transform .5s cubic-bezier(.22,.61,.36,1)">
 <div style="display:flex;flex-direction:column;gap:16px">
-<span data-reveal="" style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">01</span>
+<span style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">01</span>
 <span style="width:34px;height:1px;background:#1a1a1c"></span>
 <h3 style="margin:6px 0 0;font:400 clamp(23px,2.4vw,32px)/1.1 'Bodoni Moda',serif;color:#1a1a1c;text-wrap:balance">Confidence Building</h3>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,16px)/1.5 'Bodoni Moda',serif; font-style: normal; color: #6e6e73; text-wrap: pretty; width:min(450px,100%)">Because confidence isn't built in a single moment. It's built one experience at a time.</p>
+<p class="experience-hook" style="margin:0;font:400 clamp(19px,1.75vw,24px)/1.25 'Bodoni Moda',serif;letter-spacing:-.012em;color:#6e6e73;text-wrap:balance;width:min(430px,100%)">Because confidence isn't built in a single moment. It's built one experience at a time.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px;padding-top:clamp(4px,1vw,14px)">
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">Confidence isn't taught in a classroom. It is built through experience: stepping outside what feels familiar, trying something new, discovering what you are capable of.</p>
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">From the runway to new rooms and new people, every experience builds their confidence and strengthens their presence.</p>
 </div>
 </article>
-<div data-stack-spacer="" aria-hidden="true" style="height:clamp(240px,42vh,400px)"></div>
+<div aria-hidden="true" data-stack-spacer="" style="height:clamp(240px,42vh,400px)"></div>
 <article class="experience-card" data-stack="" style="position:sticky;top:104px;z-index:2;background:#fdfdfd;border:1px solid #d4d4d8;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.08);padding:clamp(28px,3.4vw,46px);min-height:clamp(430px,56vh,500px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,56px);align-content:start;transition:transform .5s cubic-bezier(.22,.61,.36,1)">
 <div style="display:flex;flex-direction:column;gap:16px">
-<span data-reveal="" style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">02</span>
+<span style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">02</span>
 <span style="width:34px;height:1px;background:#1a1a1c"></span>
 <h3 style="margin:6px 0 0;font:400 clamp(23px,2.4vw,32px)/1.1 'Bodoni Moda',serif;color:#1a1a1c;text-wrap:balance">A Global Experience</h3>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,16px)/1.5 'Bodoni Moda',serif; font-style: normal; color: #6e6e73; text-wrap: pretty; width:min(450px,100%)">One platform. Global cities. A world of possibilities.</p>
+<p class="experience-hook" style="margin:0;font:400 clamp(19px,1.75vw,24px)/1.25 'Bodoni Moda',serif;letter-spacing:-.012em;color:#6e6e73;text-wrap:balance;width:min(430px,100%)">One platform. Global cities. A world of possibilities.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px;padding-top:clamp(4px,1vw,14px)">
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">Young people are growing up in a connected world. An international community broadens their horizons and gives them the confidence to feel at home anywhere.</p>
 </div>
 </article>
-<div data-stack-spacer="" aria-hidden="true" style="height:clamp(240px,42vh,400px)"></div>
+<div aria-hidden="true" data-stack-spacer="" style="height:clamp(240px,42vh,400px)"></div>
 <article class="experience-card" data-stack="" style="position:sticky;top:104px;z-index:3;background:#fdfdfd;border:1px solid #d4d4d8;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.08);padding:clamp(28px,3.4vw,46px);min-height:clamp(430px,56vh,500px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,56px);align-content:start;transition:transform .5s cubic-bezier(.22,.61,.36,1)">
 <div style="display:flex;flex-direction:column;gap:16px">
-<span data-reveal="" style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">03</span>
+<span style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">03</span>
 <span style="width:34px;height:1px;background:#1a1a1c"></span>
 <h3 style="margin:6px 0 0;font:400 clamp(23px,2.4vw,32px)/1.1 'Bodoni Moda',serif;color:#1a1a1c;text-wrap:balance">Media Experience</h3>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,16px)/1.5 'Bodoni Moda',serif; font-style: normal; color: #6e6e73; text-wrap: pretty; width:min(450px,100%)">Their moment. Captured, celebrated and shared.</p>
+<p class="experience-hook" style="margin:0;font:400 clamp(19px,1.75vw,24px)/1.25 'Bodoni Moda',serif;letter-spacing:-.012em;color:#6e6e73;text-wrap:balance;width:min(430px,100%)">Their moment. Captured, celebrated and shared.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px;padding-top:clamp(4px,1vw,14px)">
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">Professional photography, video and interviews give them their first real experience of media. They learn to present themselves on camera, and keep the moments from the journey.</p>
 </div>
 </article>
-<div data-stack-spacer="" aria-hidden="true" style="height:clamp(240px,42vh,400px)"></div>
+<div aria-hidden="true" data-stack-spacer="" style="height:clamp(240px,42vh,400px)"></div>
 <article class="experience-card" data-stack="" style="position:sticky;top:104px;z-index:4;background:#fdfdfd;border:1px solid #d4d4d8;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.08);padding:clamp(28px,3.4vw,46px);min-height:clamp(430px,56vh,500px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,56px);align-content:start;transition:transform .5s cubic-bezier(.22,.61,.36,1)">
 <div style="display:flex;flex-direction:column;gap:16px">
-<span data-reveal="" style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">04</span>
+<span style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">04</span>
 <span style="width:34px;height:1px;background:#1a1a1c"></span>
 <h3 style="margin:6px 0 0;font:400 clamp(23px,2.4vw,32px)/1.1 'Bodoni Moda',serif;color:#1a1a1c;text-wrap:balance">High Fashion &amp; Premium Runway</h3>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,16px)/1.5 'Bodoni Moda',serif; font-style: normal; color: #6e6e73; text-wrap: pretty; width:min(450px,100%)">Their moment. Their stage. Their time to shine.</p>
+<p class="experience-hook" style="margin:0;font:400 clamp(19px,1.75vw,24px)/1.25 'Bodoni Moda',serif;letter-spacing:-.012em;color:#6e6e73;text-wrap:balance;width:min(430px,100%)">Their moment. Their stage. Their time to shine.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px;padding-top:clamp(4px,1vw,14px)">
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">Elevated styling, creative direction and curated looks introduce them to the world of high fashion. Fashion becomes more than what they wear. It becomes self-expression, a way to explore their individuality and personal style in a truly premium environment.</p>
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">From backstage preparation to the spotlight, they learn to hold a stage and walk with confidence.</p>
 </div>
 </article>
-<div data-stack-spacer="" aria-hidden="true" style="height:clamp(240px,42vh,400px)"></div>
+<div aria-hidden="true" data-stack-spacer="" style="height:clamp(240px,42vh,400px)"></div>
 <article class="experience-card" data-stack="" style="position:sticky;top:104px;z-index:5;background:#fdfdfd;border:1px solid #d4d4d8;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.08);padding:clamp(28px,3.4vw,46px);min-height:clamp(430px,56vh,500px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,56px);align-content:start;transition:transform .5s cubic-bezier(.22,.61,.36,1)">
 <div style="display:flex;flex-direction:column;gap:16px">
-<span data-reveal="" style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">05</span>
+<span style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#1a1a1c">05</span>
 <span style="width:34px;height:1px;background:#1a1a1c"></span>
 <h3 style="margin:6px 0 0;font:400 clamp(23px,2.4vw,32px)/1.1 'Bodoni Moda',serif;color:#1a1a1c;text-wrap:balance">Personality Development</h3>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,16px)/1.5 'Bodoni Moda',serif; font-style: normal; color: #6e6e73; text-wrap: pretty; width:min(450px,100%)">Growing into the best version of themselves.</p>
+<p class="experience-hook" style="margin:0;font:400 clamp(19px,1.75vw,24px)/1.25 'Bodoni Moda',serif;letter-spacing:-.012em;color:#6e6e73;text-wrap:balance;width:min(430px,100%)">Growing into the best version of themselves.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px;padding-top:clamp(4px,1vw,14px)">
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty">Through guided training, new experiences and meaningful interactions, young participants build self-awareness, communication skills, social confidence and greater independence. They learn to express themselves clearly, connect with others confidently and stay true to who they are.</p>
 </div>
 </article>
-<div data-stack-spacer="" aria-hidden="true" style="height:clamp(240px,42vh,400px)"></div>
+<div aria-hidden="true" data-stack-spacer="" style="height:clamp(240px,42vh,400px)"></div>
 <article class="experience-card" data-stack="" style="position:sticky;top:104px;z-index:6;background:#131314;border:1px solid #131314;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.18);padding:clamp(28px,3.4vw,46px);min-height:clamp(430px,56vh,500px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,56px);align-content:start;transition:transform .5s cubic-bezier(.22,.61,.36,1)">
 <div style="display:flex;flex-direction:column;gap:16px">
-<span data-reveal="" style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#f2f2f4">06</span>
+<span style="font:400 clamp(40px,5vw,72px)/1 'Bodoni Moda',serif;color:#f2f2f4">06</span>
 <span style="width:34px;height:1px;background:#f2f2f4"></span>
 <h3 style="margin:6px 0 0;font:400 clamp(23px,2.4vw,32px)/1.1 'Bodoni Moda',serif;color:#f2f2f4;text-wrap:balance">Networking</h3>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,16px)/1.5 'Bodoni Moda',serif; font-style: normal; color: rgba(242,242,244,.72); text-wrap: pretty; width:min(450px,100%)">The right environment can expand your child's world.</p>
+<p class="experience-hook" style="margin:0;font:400 clamp(19px,1.75vw,24px)/1.25 'Bodoni Moda',serif;letter-spacing:-.012em;color:rgba(242,242,244,.72);text-wrap:balance;width:min(430px,100%)">The right environment can expand your child's world.</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:16px;padding-top:clamp(4px,1vw,14px)">
 <p data-scrub="" style="margin:0;font:400 clamp(14.5px,1.2vw,16px)/1.68 Inter,sans-serif;color:#d4d4d8;text-wrap:pretty">Friendships with like-minded young people, and connections with professionals from fashion, media and the creative industries. They grow more confident meeting new people, and see pathways they would not otherwise encounter.</p>
@@ -388,7 +396,7 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <section style="max-width:1240px;margin:0 auto;padding:clamp(32px,4vw,56px) 28px 0">
 <div style="height:1px;background:linear-gradient(to right,transparent,#d4d4d8 48px,#d4d4d8 calc(100% - 48px),transparent)"></div>
 <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(28px,3.5vw,44px);padding:clamp(36px,5vw,64px) 0 0">
-<p data-reveal="" style="margin:0;max-width:24ch;font:400 clamp(30px,4.6vw,58px)/1.05 'Bodoni Moda',serif;letter-spacing:-.02em;color:#1a1a1c;text-wrap:balance">A stronger network today creates greater possibilities tomorrow.</p>
+<p data-reveal="" style="margin:0;max-width:29ch;font:400 clamp(28px,4.1vw,52px)/1.08 'Bodoni Moda',serif;letter-spacing:-.018em;color:#1a1a1c;text-wrap:balance"><span style="display:block">The runway gives them a chance to shine.</span><span style="display:block;margin-top:.18em">The journey gives them the confidence to go further, dream bigger and see beyond boundaries.</span></p>
 <a class="ghl-hover-13" data-reveal="" data-scroll="#apply" href="#" style="display:inline-flex;align-items:center;gap:14px;padding:20px 36px;border:1px solid #1a1a1c;border-radius:8px;color:#1a1a1c;font:500 12.5px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background .3s ease,color .3s ease,gap .3s ease">Be part of the experience <span aria-hidden="true" class="arrow-icon" style="font-size:16px">→</span></a>
 </div>
 </section>
@@ -418,92 +426,47 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 </div>
 </section>
 <section style="max-width:1240px;margin:0 auto;padding:clamp(72px,9vw,120px) 28px 0">
-<div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 24px;margin-bottom:clamp(20px,2.6vw,32px)">
+<div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 24px;margin-bottom:clamp(20px,2.6vw,32px)">
 <h2 style="margin:0;font:400 clamp(28px,4vw,50px)/1.04 'Bodoni Moda',serif;letter-spacing:-.02em;color:#1a1a1c">Featured Talent.</h2>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(10px,1.4vw,18px)">
-<figure style="position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:#e8e8ea">
-<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-1" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#d9d9dc;overflow:hidden"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE PLACEHOLDER</span></div>
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,12,.62) 0%,rgba(11,11,12,.18) 34%,rgba(11,11,12,0) 62%);pointer-events:none"></div>
-<figcaption style="position:absolute;inset:auto 0 0 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:clamp(16px,1.8vw,22px);pointer-events:none">
-<span style="display:block">
-<span style="display:block;width:26px;height:1px;margin-bottom:10px;background:rgba(242,242,244,.75)"></span>
-<span style="display:block;font:400 clamp(19px,1.9vw,25px)/1.05 'Bodoni Moda',serif;letter-spacing:-.01em;color:#f2f2f4">London</span>
-</span>
-<span style="font:400 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:rgba(242,242,244,.72);white-space:nowrap">01</span>
-</figcaption>
-</figure>
-<figure style="position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:#e8e8ea">
-<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-2" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#d9d9dc;overflow:hidden"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE PLACEHOLDER</span></div>
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,12,.62) 0%,rgba(11,11,12,.18) 34%,rgba(11,11,12,0) 62%);pointer-events:none"></div>
-<figcaption style="position:absolute;inset:auto 0 0 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:clamp(16px,1.8vw,22px);pointer-events:none">
-<span style="display:block">
-<span style="display:block;width:26px;height:1px;margin-bottom:10px;background:rgba(242,242,244,.75)"></span>
-<span style="display:block;font:400 clamp(19px,1.9vw,25px)/1.05 'Bodoni Moda',serif;letter-spacing:-.01em;color:#f2f2f4">New York</span>
-</span>
-<span style="font:400 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:rgba(242,242,244,.72);white-space:nowrap">02</span>
-</figcaption>
-</figure>
-<figure style="position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:#e8e8ea">
-<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-3" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#d9d9dc;overflow:hidden"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE PLACEHOLDER</span></div>
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,12,.62) 0%,rgba(11,11,12,.18) 34%,rgba(11,11,12,0) 62%);pointer-events:none"></div>
-<figcaption style="position:absolute;inset:auto 0 0 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:clamp(16px,1.8vw,22px);pointer-events:none">
-<span style="display:block">
-<span style="display:block;width:26px;height:1px;margin-bottom:10px;background:rgba(242,242,244,.75)"></span>
-<span style="display:block;font:400 clamp(19px,1.9vw,25px)/1.05 'Bodoni Moda',serif;letter-spacing:-.01em;color:#f2f2f4">Dubai</span>
-</span>
-<span style="font:400 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:rgba(242,242,244,.72);white-space:nowrap">03</span>
-</figcaption>
-</figure>
-<figure style="position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:#e8e8ea">
-<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-4" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#d9d9dc;overflow:hidden"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE PLACEHOLDER</span></div>
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,12,.62) 0%,rgba(11,11,12,.18) 34%,rgba(11,11,12,0) 62%);pointer-events:none"></div>
-<figcaption style="position:absolute;inset:auto 0 0 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:clamp(16px,1.8vw,22px);pointer-events:none">
-<span style="display:block">
-<span style="display:block;width:26px;height:1px;margin-bottom:10px;background:rgba(242,242,244,.75)"></span>
-<span style="display:block;font:400 clamp(19px,1.9vw,25px)/1.05 'Bodoni Moda',serif;letter-spacing:-.01em;color:#f2f2f4">Mumbai</span>
-</span>
-<span style="font:400 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:rgba(242,242,244,.72);white-space:nowrap">04</span>
-</figcaption>
-</figure>
-<figure style="position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:#e8e8ea">
-<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-5" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#d9d9dc;overflow:hidden"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE PLACEHOLDER</span></div>
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,12,.62) 0%,rgba(11,11,12,.18) 34%,rgba(11,11,12,0) 62%);pointer-events:none"></div>
-<figcaption style="position:absolute;inset:auto 0 0 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:clamp(16px,1.8vw,22px);pointer-events:none">
-<span style="display:block">
-<span style="display:block;width:26px;height:1px;margin-bottom:10px;background:rgba(242,242,244,.75)"></span>
-<span style="display:block;font:400 clamp(19px,1.9vw,25px)/1.05 'Bodoni Moda',serif;letter-spacing:-.01em;color:#f2f2f4">Delhi NCR</span>
-</span>
-<span style="font:400 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:rgba(242,242,244,.72);white-space:nowrap">05</span>
-</figcaption>
-</figure>
-<figure style="position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;background:#e8e8ea">
-<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-6" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#d9d9dc;overflow:hidden"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE PLACEHOLDER</span></div>
-<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,12,.62) 0%,rgba(11,11,12,.18) 34%,rgba(11,11,12,0) 62%);pointer-events:none"></div>
-<figcaption style="position:absolute;inset:auto 0 0 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:clamp(16px,1.8vw,22px);pointer-events:none">
-<span style="display:block">
-<span style="display:block;width:26px;height:1px;margin-bottom:10px;background:rgba(242,242,244,.75)"></span>
-<span style="display:block;font:400 clamp(19px,1.9vw,25px)/1.05 'Bodoni Moda',serif;letter-spacing:-.01em;color:#f2f2f4">Singapore</span>
-</span>
-<span style="font:400 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:rgba(242,242,244,.72);white-space:nowrap">06</span>
-</figcaption>
+<div class="featured-talent-gallery" aria-label="Featured talent gallery">
+<figure class="featured-talent-card">
+<div class="featured-talent-media">
+<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-1"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE 01</span></div>
+</div>
+</figure><figure class="featured-talent-card">
+<div class="featured-talent-media">
+<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-2"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE 02</span></div>
+</div>
+</figure><figure class="featured-talent-card">
+<div class="featured-talent-media">
+<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-3"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE 03</span></div>
+</div>
+</figure><figure class="featured-talent-card">
+<div class="featured-talent-media">
+<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-4"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE 04</span></div>
+</div>
+</figure><figure class="featured-talent-card">
+<div class="featured-talent-media">
+<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-5"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE 05</span></div>
+</div>
+</figure><figure class="featured-talent-card">
+<div class="featured-talent-media">
+<div class="asset-placeholder talent-placeholder" data-asset="gys-talent-6"><span style="font:500 9px/1 Inter,sans-serif;letter-spacing:.16em;color:#77777d;text-transform:uppercase">IMAGE 06</span></div>
+</div>
 </figure>
 </div>
 </section>
 <section id="why" style="max-width:1240px;margin:0 auto;padding:clamp(80px,10vw,140px) 28px 0;scroll-margin-top:100px">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,64px);align-items:end;margin-bottom:clamp(30px,4vw,52px)">
-<div data-reveal="">
-<p style="margin:0 0 16px;font:500 11px/1 Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6e6e73">Questions, answered</p>
-<h2 style="margin:0;max-width:17ch;font:400 clamp(28px,4.4vw,56px)/1.02 'Bodoni Moda',serif;letter-spacing:-.02em;color:#1a1a1c;text-wrap:balance">What parents ask us first.</h2>
-</div>
-<p data-scrub="" style="margin: 0; font: 400 15px/1.68 Inter,sans-serif; color: #4a4a4f; text-wrap: pretty">You are the one signing the form and driving to rehearsals. These are the five things parents want settled before they say yes.</p>
+<div style="margin-bottom:clamp(30px,4vw,52px)">
+<h2 style="margin:0;font:400 clamp(34px,4.8vw,62px)/1 'Bodoni Moda',serif;letter-spacing:-.025em;color:#1a1a1c">FAQ</h2>
 </div>
 <div style="border-top:1px solid #1a1a1c">
 <div class="ghl-hover-30" data-faq-item="0" style="border-bottom:1px solid #e8e8ea;transition:background .4s ease">
 <button aria-expanded="true" data-faq-toggle="0" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
 <span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">01</span>
 <span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Can my child participate with no experience?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="0" viewBox="0 0 16 16" fill="none"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="0" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
 </button>
 <div data-faq-answer="0" style="display:grid;grid-template-rows:1fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:1">
 <div style="min-height:0;overflow:hidden">
@@ -518,7 +481,7 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <button aria-expanded="false" data-faq-toggle="1" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
 <span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">02</span>
 <span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Should my child participate if we are not planning a modelling career?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="1" viewBox="0 0 16 16" fill="none"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="1" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
 </button>
 <div data-faq-answer="1" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
 <div style="min-height:0;overflow:hidden">
@@ -533,7 +496,7 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <button aria-expanded="false" data-faq-toggle="2" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
 <span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">03</span>
 <span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Can this experience hurt my child's self-esteem?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="2" viewBox="0 0 16 16" fill="none"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="2" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
 </button>
 <div data-faq-answer="2" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
 <div style="min-height:0;overflow:hidden">
@@ -548,7 +511,7 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <button aria-expanded="false" data-faq-toggle="3" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
 <span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">04</span>
 <span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Will my child be safe?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="3" viewBox="0 0 16 16" fill="none"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="3" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
 </button>
 <div data-faq-answer="3" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
 <div style="min-height:0;overflow:hidden">
@@ -563,7 +526,7 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <button aria-expanded="false" data-faq-toggle="4" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
 <span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">05</span>
 <span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Will this help my child's education?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="4" viewBox="0 0 16 16" fill="none"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="4" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
 </button>
 <div data-faq-answer="4" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
 <div style="min-height:0;overflow:hidden">
@@ -575,13 +538,12 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 </div>
 </div>
 </div>
-<div style="display:flex;flex-wrap:wrap;gap:18px 32px;justify-content:space-between;align-items:center;padding-top:clamp(24px,3vw,34px)">
-<p data-scrub="" style="margin: 0; max-width: 48.36ch; font: 400 13.5px/1.6 Inter,sans-serif; color: #6e6e73; align-items: center">Still something on your mind? Ask us before you apply, not after.</p>
-<a class="ghl-hover-35" data-scroll="#apply" href="#" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border: 1px solid #1a1a1c; border-radius: 8px; background: #1a1a1c; color: #fafafa; font: 500 11.5px/1 Inter,sans-serif; letter-spacing: .16em; text-transform: uppercase; text-decoration: none; transition: background .3s ease,color .3s ease">GET IN TOUCH</a>
+<div style="display:flex;justify-content:flex-end;align-items:center;padding-top:clamp(24px,3vw,34px)">
+<a class="ghl-hover-35" data-scroll="#apply" href="#" style="display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border:1px solid #1a1a1c;border-radius:8px;background:#1a1a1c;color:#fafafa;font:500 11.5px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .3s ease,color .3s ease">GET IN TOUCH</a>
 </div>
 </section>
 <section style="padding:clamp(80px,10vw,132px) 0 0;overflow:hidden">
-<p style="max-width:1240px;margin:0 auto 26px;padding:0 28px;font:500 11px/1 Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6e6e73">Media &amp; Partners</p>
+<p style="max-width: 1240px; margin: 0 auto 26px; padding: 0 28px; font: 500 11px/1 Inter,sans-serif; letter-spacing: .22em; text-transform: uppercase; color: #6e6e73; text-align: center; font-size: 15px">MEDIA &amp; PARTNERS</p>
 <div style="position:relative;border-top:1px solid #e8e8ea;border-bottom:1px solid #e8e8ea;padding:28px 0;background:#f5f5f6">
 <div style="display:flex;width:max-content;animation:wkfw-mq 38s linear infinite">
 <span class="ghl-hover-36" style="flex:none;padding:0 clamp(26px,3.4vw,52px);font:500 clamp(13px,1.3vw,16px)/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#6e6e73;white-space:nowrap;transition:color .3s ease">Maison Elara</span>
@@ -640,48 +602,47 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 </section>
 </main>
 <footer class="site-footer">
-  <div class="footer-shell">
-    <div class="footer-mast">
-      <h2 class="footer-wordmark">Global<br>Youth<br>Show<span class="footer-dot" aria-hidden="true"></span></h2>
-      <div>
-        <p class="footer-intro">A global runway platform for young models aged 5–18. Six cities, one standard, and an experience designed to build confidence beyond the runway.</p>
-        <a class="footer-email" href="mailto:hello@theglobalyouthshow.com"><span>hello@theglobalyouthshow.com</span><span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-    <div class="footer-grid">
-      <div>
-        <p class="footer-label">Connect</p>
-        <div class="footer-links">
-          <a class="footer-link" href="tel:+919820000000">+91 98200 00000</a>
-          <span class="footer-handle">@theglobalyouthshow</span>
-        </div>
-      </div>
-      <div>
-        <p class="footer-label">Explore</p>
-        <div class="footer-links">
-          <a class="footer-link" data-scroll="#story" href="#story">Story</a>
-          <a class="footer-link" data-scroll="#gets" href="#gets">Six experiences</a>
-          <a class="footer-link" data-scroll="#why" href="#why">FAQ</a>
-          <a class="footer-link" data-scroll="#apply" href="#apply">Apply</a>
-        </div>
-      </div>
-      <div>
-        <p class="footer-label">Cities</p>
-        <div class="footer-cities">
-          <span class="footer-city">London</span><span class="footer-city">New York</span>
-          <span class="footer-city">Dubai</span><span class="footer-city">Mumbai</span>
-          <span class="footer-city">Delhi NCR</span><span class="footer-city">Singapore</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer-meta">
-      <span>© 2026 The Global Youth Show. All rights reserved.</span>
-      <div class="footer-legal"><span>Privacy</span><span>Terms</span><span>Child safety policy</span><span>Refunds</span></div>
-    </div>
-  </div>
+<div class="footer-shell">
+<div class="footer-mast">
+<h2 class="footer-wordmark">Global<br/>Youth<br/>Show<span aria-hidden="true" class="footer-dot"></span></h2>
+<div>
+<p class="footer-intro">The Global Youth Show is a premium global platform for young people aged 5 to 18 years old, created to build confidence, life skills, self-presentation and a broader perspective through the exciting world of high fashion. Join us on this journey of empowering our next generation to step boldly into the future.</p>
+<a class="footer-email" href="mailto:hello@theglobalyouthshow.com"><span>Get in Touch!</span><span aria-hidden="true">→</span></a>
+</div>
+</div>
+<div class="footer-grid">
+<div>
+<p class="footer-label">Connect</p>
+<div class="footer-links">
+<a class="footer-link" href="tel:+919820000000">+91 98200 00000</a>
+<span class="footer-handle">@theglobalyouthshow</span>
+</div>
+</div>
+<div>
+<p class="footer-label">Explore</p>
+<div class="footer-links">
+<a class="footer-link" data-scroll="#story" href="#story">Story</a>
+<a class="footer-link" data-scroll="#gets" href="#gets">Six experiences</a>
+<a class="footer-link" data-scroll="#why" href="#why">FAQ</a>
+<a class="footer-link" data-scroll="#apply" href="#apply">Apply</a>
+</div>
+</div>
+<div>
+<p class="footer-label">Cities</p>
+<div class="footer-cities">
+<span class="footer-city">London</span><span class="footer-city">New York</span>
+<span class="footer-city">Dubai</span><span class="footer-city">Mumbai</span>
+<span class="footer-city">Delhi NCR</span><span class="footer-city">Singapore</span>
+</div>
+</div>
+</div>
+<div class="footer-meta">
+<span>© 2026 The Global Youth Show. All rights reserved.</span>
+<div class="footer-legal"><span>Privacy</span><span>Terms</span><span>Child safety policy</span></div>
+</div>
+</div>
 </footer>
 </div>
-
 <script>
 (function(){
   'use strict';
@@ -860,16 +821,20 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
     return Math.max(0,Math.min(1,travel/span));
   }
 
-  /* -------- Six Experiences: fixed frame on mobile, variable reading runway -------- */
+  /* -------- Six Experiences: scroll-driven card stack, static text -------- */
   const experienceCards=qsa('[data-stack]');
   const experienceGroups=experienceCards.map((card,index)=>{
-    const els=qsa('[data-scrub]',card),chars=[];els.forEach(el=>chars.push(...splitChars(el)));
+    /* Experience copy stays fully readable. Scroll motion belongs to the card itself. */
+    qsa('[data-scrub]',card).forEach(el=>{
+      qsa('[data-ch]',el).forEach(ch=>ch.replaceWith(document.createTextNode(ch.textContent||'')));
+      el.style.opacity='1';
+    });
     let anchor=card.previousElementSibling;
     if(!anchor||!anchor.matches('[data-stack-anchor]')){
       anchor=document.createElement('div');anchor.setAttribute('data-stack-anchor','');anchor.setAttribute('aria-hidden','true');
       anchor.style.cssText='height:0;overflow:hidden;pointer-events:none';card.insertAdjacentElement('beforebegin',anchor);
     }
-    return{card,anchor,els,chars,index,last:-1,spacer:null,reading:0};
+    return{card,anchor,index,spacer:null};
   });
   function isMobile(){return !!(mobileMQ&&mobileMQ.matches);}
   function stackTop(card){const t=parseFloat(getComputedStyle(card).top);return Number.isFinite(t)?t:(isMobile()?76:104);}
@@ -879,67 +844,71 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
     const inner=window.innerHeight||700;
     return Math.max(520,Math.min(900,vv||inner));
   }
-  function readingDistance(g,vh){
-    if(isMobile())return Math.max(430,Math.min(820,220+g.chars.length*2.15));
-    return Math.max(vh*.82,Math.min(vh*1.6,260+g.chars.length*2.35));
-  }
   function ensureExperienceRunways(){
+    if(isMobile()){
+      experienceGroups.forEach(g=>{
+        g.card.style.removeProperty('height');
+        g.card.style.removeProperty('min-height');
+        g.card.style.removeProperty('max-height');
+      });
+    }
     const vh=stableViewportHeight();
     experienceGroups.forEach((g,index)=>{
       let spacer=g.card.nextElementSibling;
       if(!spacer||!spacer.matches('[data-stack-spacer]')){
         spacer=document.createElement('div');spacer.setAttribute('data-stack-spacer','');spacer.setAttribute('aria-hidden','true');g.card.insertAdjacentElement('afterend',spacer);
       }
-      g.spacer=spacer;g.reading=readingDistance(g,vh);
-      const top=stackTop(g.card),h=g.card.getBoundingClientRect().height;
-      const hold=isMobile()?Math.max(150,vh*.18):Math.max(160,vh*.18);
-      let px;
-      if(index<experienceGroups.length-1){
-        /* Next card cannot enter the viewport until reading + hold are complete. */
-        px=Math.max(isMobile()?620:vh*.72,g.reading+hold+vh-h-top+24);
-      }else{
-        /* Final card gets its own complete reading, hold and graceful release runway. */
-        const release=isMobile()?Math.max(360,vh*.55):Math.max(320,vh*.42);
-        px=Math.max(isMobile()?900:vh*1.08,g.reading+hold+release);
-      }
-      spacer.style.height=Math.round(px)+'px';spacer.style.pointerEvents='none';
+      g.spacer=spacer;
+      /* The runway now controls card choreography only, not text reveal. */
+      const base=isMobile()?Math.max(330,g.card.getBoundingClientRect().height*.72):Math.max(500,vh*.68);
+      const finalExtra=isMobile()?Math.max(190,g.card.getBoundingClientRect().height*.42):Math.max(250,vh*.30);
+      spacer.style.height=Math.round(base+(index===experienceGroups.length-1?finalExtra:0))+'px';
+      spacer.style.pointerEvents='none';
     });
   }
-  function experienceProgress(g){
-    const top=stackTop(g.card);
-    /* Anchor keeps moving even while the card is sticky, so it is a stable scroll clock. */
-    const travelled=top-g.anchor.getBoundingClientRect().top+18;
-    return Math.max(0,Math.min(1,travelled/Math.max(1,g.reading)));
+  function cardEnterProgress(g,vh){
+    const top=stackTop(g.card),y=g.anchor.getBoundingClientRect().top;
+    const start=vh*.90,end=top+18;
+    return Math.max(0,Math.min(1,(start-y)/Math.max(1,start-end)));
   }
-  function paintStackDepth(vh){
+  function cardExitProgress(g,index,vh){
+    const next=experienceGroups[index+1];
+    if(!next)return 0;
+    const top=stackTop(g.card),nextY=next.anchor.getBoundingClientRect().top;
+    const start=vh*.88,end=top+Math.min(110,g.card.getBoundingClientRect().height*.22);
+    return Math.max(0,Math.min(1,(start-nextY)/Math.max(1,start-end)));
+  }
+  function paintStackMotion(vh){
     experienceGroups.forEach((g,index)=>{
-      if(!isMobile()||reduce){g.card.style.transform='';g.card.style.filter='';return;}
-      const next=experienceGroups[index+1];
-      if(!next){g.card.style.transform='';g.card.style.filter='';return;}
-      const top=stackTop(g.card),nextY=next.anchor.getBoundingClientRect().top;
-      const approachStart=vh*.98,approachEnd=top+g.card.getBoundingClientRect().height*.16;
-      let p=(approachStart-nextY)/Math.max(1,approachStart-approachEnd);p=Math.max(0,Math.min(1,p));
-      const scale=1-p*.022,y=-p*6;
-      g.card.style.transform=`translateY(${y.toFixed(2)}px) scale(${scale.toFixed(4)})`;
-      g.card.style.filter=`brightness(${(1-p*.035).toFixed(3)})`;
+      if(reduce){g.card.style.transform='none';g.card.style.filter='none';g.card.style.opacity='1';return;}
+      const enter=cardEnterProgress(g,vh),exit=cardExitProgress(g,index,vh);
+      const mobile=isMobile();
+      const enterY=(1-enter)*(mobile?24:40);
+      const enterScale=mobile?1:(.985+enter*.015);
+      const exitScale=mobile?1:(1-exit*.018);
+      const exitY=-exit*(mobile?8:10);
+      const scale=enterScale*exitScale;
+      const y=enterY+exitY;
+      g.card.style.transform=mobile
+        ? `translateY(${y.toFixed(2)}px)`
+        : `translateY(${y.toFixed(2)}px) scale(${scale.toFixed(4)})`;
+      g.card.style.opacity=String((.90+enter*.10).toFixed(3));
+      g.card.style.filter=`brightness(${(1-exit*(isMobile()?.045:.03)).toFixed(3)})`;
     });
   }
   let scrubRAF=0;
   function paintScrub(){
     scrubRAF=0;
     const vh=(window.visualViewport&&window.visualViewport.height)||window.innerHeight||800;
-    if(reduce){scrubGroups.forEach(g=>applyChars(g.chars,1));experienceGroups.forEach(g=>applyChars(g.chars,1));return;}
+    if(reduce){scrubGroups.forEach(g=>applyChars(g.chars,1));paintStackMotion(vh);return;}
     scrubGroups.forEach(g=>{
       const p=normalProgress(g,vh);if(g.last<0||Math.abs(p-g.last)>=.001){g.last=p;applyChars(g.chars,p);}
     });
-    experienceGroups.forEach(g=>{
-      const p=experienceProgress(g);if(g.last<0||Math.abs(p-g.last)>=.001){g.last=p;applyChars(g.chars,p);}
-    });
-    paintStackDepth(vh);
+    paintStackMotion(vh);
   }
   function requestScrub(){if(!scrubRAF)scrubRAF=requestAnimationFrame(paintScrub);}
   function refreshLayout(){
-    measureHeader();ensureExperienceRunways();scrubGroups.forEach(g=>g.last=-1);experienceGroups.forEach(g=>g.last=-1);requestScrub();
+    measureHeader();ensureExperienceRunways();scrubGroups.forEach(g=>g.last=-1);requestScrub();
     faqToggles.forEach(btn=>{if(btn.getAttribute('aria-expanded')==='true'){const p=faqParts(btn.getAttribute('data-faq-toggle'));if(p.ans&&p.inner)p.ans.style.height=p.inner.scrollHeight+'px';}});
   }
 
