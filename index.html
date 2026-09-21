@@ -25,10 +25,6 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 @keyframes wkfw-mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media (min-width:940px){[data-nav="desktop"]{display:flex!important}[data-nav="mobile-btn"]{display:none!important}.mobile-menu-shell{display:none!important}#mobile-menu{display:none!important}}
-/* FAQ uses measured pixel height; reliable in mobile Chromium/WebView and GHL embeds. */
-[data-faq-answer]{display:block!important;height:0;overflow:hidden!important;opacity:0;transition:height .46s cubic-bezier(.22,.61,.36,1),opacity .28s ease!important;will-change:height,opacity}
-[data-faq-item].is-open{background:rgba(18,18,20,.018)}
-[data-faq-item].is-open [data-faq-toggle]{padding-bottom:16px!important}
 
 @media (max-width:939px){#mobile-menu[hidden]{display:none!important}}
 .asset-placeholder{user-select:none}
@@ -43,10 +39,21 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 @media (max-width:767px){.featured-talent-card{flex-basis:min(78vw,300px)}.featured-talent-gallery{gap:12px;padding-bottom:10px;scrollbar-width:none}.featured-talent-gallery::-webkit-scrollbar{display:none}}
 .arrow-icon{display:inline-block;line-height:1}
 .faq-chevron{width:15px;height:15px;display:block;flex:none;color:#1a1a1c;transform:rotate(0deg);transform-origin:50% 50%;transition:transform .24s cubic-bezier(.22,.61,.36,1);will-change:transform}
-[data-faq-toggle][aria-expanded="true"] .faq-chevron{transform:rotate(180deg)}
+.faq-native[open] .faq-chevron{transform:rotate(180deg)}
+.faq-native{border-bottom:1px solid #e8e8ea;background:transparent;transition:background .25s ease}
+.faq-native[open]{background:rgba(18,18,20,.018)}
+.faq-summary{list-style:none;appearance:none;width:100%;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0;color:#1a1a1c;-webkit-tap-highlight-color:transparent}
+.faq-summary::-webkit-details-marker{display:none}
+.faq-summary::marker{display:none;content:""}
+.faq-index{font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73}
+.faq-question{font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty}
+.faq-answer{overflow:hidden}
+.faq-answer-grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,44px);padding:0 0 clamp(28px,3.2vw,40px);animation:faq-answer-in .28s cubic-bezier(.22,.61,.36,1) both}
+.faq-answer-spacer{font:400 11px/1.4 ui-monospace,Menlo,monospace;color:transparent}
+.faq-answer p{margin:0;font:400 clamp(14.5px,1.25vw,15.5px)/1.68 Inter,sans-serif;color:#4a4a4f;text-wrap:pretty;max-width:900px}
+@keyframes faq-answer-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
 .menu-icon{display:inline-block;font-size:18px;line-height:1}
 .why-link:hover .why-arrow{transform:rotate(-45deg)!important}
-[data-faq-item] [data-faq-answer]{will-change:grid-template-rows,opacity}
 .experience-card{will-change:transform,filter,opacity;transform-origin:50% 0;transition:box-shadow .3s ease!important}
 .ghl-hover-1:hover{color:#1a1a1c;border-color:#1a1a1c}.ghl-hover-2:hover{color:#1a1a1c;border-color:#1a1a1c}.ghl-hover-3:hover{color:#1a1a1c;border-color:#1a1a1c}.ghl-hover-4:hover{background:#1a1a1c;color:#fafafa}.ghl-hover-5:hover{background:#f5f5f6}.ghl-hover-6:hover{background:#1a1a1c;color:#fafafa}.ghl-hover-7:hover{color:#1a1a1c}.ghl-hover-8:hover{transform:translateY(-4px)}.ghl-hover-9:hover{transform:translateY(-4px)}.ghl-hover-10:hover{transform:translateY(-4px)}.ghl-hover-11:hover{transform:translateY(-4px)}.ghl-hover-12:hover{transform:translateY(-4px)}.ghl-hover-13:hover{background:#1a1a1c;color:#fafafa;gap:20px}.ghl-hover-14:hover{color:#1a1a1c}.ghl-hover-15:hover{color:#1a1a1c}.ghl-hover-16:hover{color:#1a1a1c}.ghl-hover-17:hover{color:#1a1a1c}.ghl-hover-18:hover{color:#1a1a1c}.ghl-hover-19:hover{color:#1a1a1c}.ghl-hover-20:hover{color:#1a1a1c}.ghl-hover-21:hover{color:#1a1a1c}.ghl-hover-22:hover{color:#1a1a1c}.ghl-hover-23:hover{color:#1a1a1c}.ghl-hover-24:hover{color:#1a1a1c}.ghl-hover-25:hover{color:#1a1a1c}.ghl-hover-26:hover{color:#1a1a1c}.ghl-hover-27:hover{color:#1a1a1c}.ghl-hover-28:hover{color:#1a1a1c}.ghl-hover-29:hover{color:#1a1a1c}.ghl-hover-30:hover{background:#f5f5f6}.ghl-hover-31:hover{background:#f5f5f6}.ghl-hover-32:hover{background:#f5f5f6}.ghl-hover-33:hover{background:#f5f5f6}.ghl-hover-34:hover{background:#f5f5f6}.ghl-hover-35:hover{background:#fafafa;color:#1a1a1c}.ghl-hover-36:hover{color:#1a1a1c}.ghl-hover-37:hover{color:#1a1a1c}.ghl-hover-38:hover{color:#1a1a1c}.ghl-hover-39:hover{color:#1a1a1c}.ghl-hover-40:hover{color:#1a1a1c}.ghl-hover-41:hover{color:#1a1a1c}.ghl-hover-42:hover{color:#1a1a1c}.ghl-hover-43:hover{color:#1a1a1c}.ghl-hover-44:hover{color:#1a1a1c}.ghl-hover-45:hover{color:#1a1a1c}.ghl-hover-46:hover{color:#1a1a1c}.ghl-hover-47:hover{color:#1a1a1c}.ghl-hover-48:hover{color:#1a1a1c}.ghl-hover-49:hover{color:#1a1a1c}.ghl-hover-50:hover{color:#1a1a1c}.ghl-hover-51:hover{color:#1a1a1c}.ghl-hover-52:hover{background:rgba(255,255,255,.14);border-color:#ffffff;gap:20px}.ghl-hover-53:hover{color:#1a1a1c}.ghl-hover-54:hover{color:#1a1a1c}.ghl-hover-55:hover{color:#1a1a1c}.ghl-hover-56:hover{color:#1a1a1c}.ghl-hover-57:hover{color:#1a1a1c}
 
@@ -203,8 +210,12 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 
   .ghl-hover-13,.ghl-hover-35,.ghl-hover-52{width:100%;max-width:100%;justify-content:space-between;padding-left:18px!important;padding-right:18px!important;white-space:normal;text-align:left;line-height:1.25!important;border-radius:10px!important}
 
-  [data-faq-item] button{padding:19px 0!important;gap:12px!important;align-items:flex-start!important;grid-template-columns:18px minmax(0,1fr) 18px!important}
-  [data-faq-item] button>span:first-child{font-size:10px!important;line-height:1.45!important;letter-spacing:.10em!important;color:#8a8a90!important;padding-top:4px!important}
+  .faq-summary{padding:19px 0!important;gap:12px!important;align-items:flex-start!important;grid-template-columns:18px minmax(0,1fr) 18px!important;touch-action:manipulation!important}
+  .faq-index{font-size:10px!important;line-height:1.45!important;letter-spacing:.10em!important;color:#8a8a90!important;padding-top:4px!important}
+  .faq-question{min-width:0!important}
+  .faq-answer-grid{grid-template-columns:18px minmax(0,1fr)!important;gap:12px!important;padding-bottom:24px!important}
+  .faq-answer p{max-width:none!important;width:100%!important}
+  .faq-chevron{margin-top:3px}
 
   #apply{margin-top:78px!important}
   #apply>div:last-child{padding-left:20px!important;padding-right:20px!important}
@@ -468,82 +479,87 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <div style="margin-bottom:clamp(30px,4vw,52px)">
 <h2 style="margin:0;font:400 clamp(34px,4.8vw,62px)/1 'Bodoni Moda',serif;letter-spacing:-.025em;color:#1a1a1c">FAQ</h2>
 </div>
-<div style="border-top:1px solid #1a1a1c">
-<div class="ghl-hover-30" data-faq-item="0" style="border-bottom:1px solid #e8e8ea;transition:background .4s ease">
-<button aria-expanded="true" data-faq-toggle="0" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
-<span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">01</span>
-<span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Can my child participate with no experience?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="0" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-</button>
-<div data-faq-answer="0" style="display:grid;grid-template-rows:1fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:1">
-<div style="min-height:0;overflow:hidden">
-<div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,44px);padding:0 0 clamp(28px,3.2vw,40px)">
-<span aria-hidden="true" style="font:400 11px/1.4 ui-monospace,Menlo,monospace;color:transparent">00</span>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,15.5px)/1.68 Inter,sans-serif; color: #4a4a4f; text-wrap: pretty; max-width: 900px">We welcome both first time participants and those with previous experience. Our team has experience working with kids of all levels. Having experience makes the journey easier, but we train all levels and all backgrounds.</p>
+<div class="faq-list" style="border-top:1px solid #1a1a1c">
+
+<details class="faq-native" name="gys-faq" open>
+<summary class="faq-summary">
+<span class="faq-index">01</span>
+<span class="faq-question">Can my child participate with no experience?</span>
+<svg aria-hidden="true" class="faq-chevron" fill="none" viewBox="0 0 16 16">
+<path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</summary>
+<div class="faq-answer">
+<div class="faq-answer-grid">
+<span aria-hidden="true" class="faq-answer-spacer">00</span>
+<p>We welcome both first time participants and those with previous experience. Our team has experience working with kids of all levels. Having experience makes the journey easier, but we train all levels and all backgrounds.</p>
 </div>
 </div>
+</details>
+
+<details class="faq-native" name="gys-faq">
+<summary class="faq-summary">
+<span class="faq-index">02</span>
+<span class="faq-question">Should my child participate if we are not planning a modelling career?</span>
+<svg aria-hidden="true" class="faq-chevron" fill="none" viewBox="0 0 16 16">
+<path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</summary>
+<div class="faq-answer">
+<div class="faq-answer-grid">
+<span aria-hidden="true" class="faq-answer-spacer">00</span>
+<p>Absolutely. The Global Youth Show is meant to help the next generation no matter what path they choose. Like any other extracurricular activity, they build skills for life. They do not have to plan a career to take part.</p>
 </div>
 </div>
-<div class="ghl-hover-31" data-faq-item="1" style="border-bottom:1px solid #e8e8ea;transition:background .4s ease">
-<button aria-expanded="false" data-faq-toggle="1" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
-<span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">02</span>
-<span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Should my child participate if we are not planning a modelling career?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="1" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-</button>
-<div data-faq-answer="1" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
-<div style="min-height:0;overflow:hidden">
-<div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,44px);padding:0 0 clamp(28px,3.2vw,40px)">
-<span aria-hidden="true" style="font:400 11px/1.4 ui-monospace,Menlo,monospace;color:transparent">00</span>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,15.5px)/1.68 Inter,sans-serif; color: #4a4a4f; text-wrap: pretty; max-width: 900px">Absolutely. The Global Youth Show is meant to help the next generation no matter what path they choose. Like any other extracurricular activity, they build skills for life. They do not have to plan a career to take part.</p>
+</details>
+
+<details class="faq-native" name="gys-faq">
+<summary class="faq-summary">
+<span class="faq-index">03</span>
+<span class="faq-question">Can this experience hurt my child's self-esteem?</span>
+<svg aria-hidden="true" class="faq-chevron" fill="none" viewBox="0 0 16 16">
+<path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</summary>
+<div class="faq-answer">
+<div class="faq-answer-grid">
+<span aria-hidden="true" class="faq-answer-spacer">00</span>
+<p>Our platform is designed to uplift every child and keep building as they progress through the levels. All children are treated equally, with care, encouragement and respect. We are not a competition or a beauty pageant. There are no winners. This experience leaves your child standing taller, facing stage fear and believing in themselves a little more.</p>
 </div>
 </div>
+</details>
+
+<details class="faq-native" name="gys-faq">
+<summary class="faq-summary">
+<span class="faq-index">04</span>
+<span class="faq-question">Will my child be safe?</span>
+<svg aria-hidden="true" class="faq-chevron" fill="none" viewBox="0 0 16 16">
+<path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</summary>
+<div class="faq-answer">
+<div class="faq-answer-grid">
+<span aria-hidden="true" class="faq-answer-spacer">00</span>
+<p>Absolutely. The young participants are our utmost priority. Our experienced staff are fully responsible from the time you drop them off until you pick them up. We have standard processes and procedures, always followed by trained staff, to ensure the wellbeing of every child at every step of their journey with us.</p>
 </div>
 </div>
-<div class="ghl-hover-32" data-faq-item="2" style="border-bottom:1px solid #e8e8ea;transition:background .4s ease">
-<button aria-expanded="false" data-faq-toggle="2" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
-<span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">03</span>
-<span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Can this experience hurt my child's self-esteem?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="2" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-</button>
-<div data-faq-answer="2" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
-<div style="min-height:0;overflow:hidden">
-<div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,44px);padding:0 0 clamp(28px,3.2vw,40px)">
-<span aria-hidden="true" style="font:400 11px/1.4 ui-monospace,Menlo,monospace;color:transparent">00</span>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,15.5px)/1.68 Inter,sans-serif; color: #4a4a4f; text-wrap: pretty; max-width: 900px">Our platform is designed to uplift every child and keep building as they progress through the levels. All children are treated equally, with care, encouragement and respect. We are not a competition or a beauty pageant. There are no winners. This experience leaves your child standing taller, facing stage fear and believing in themselves a little more.</p>
+</details>
+
+<details class="faq-native" name="gys-faq">
+<summary class="faq-summary">
+<span class="faq-index">05</span>
+<span class="faq-question">Will this help my child's education?</span>
+<svg aria-hidden="true" class="faq-chevron" fill="none" viewBox="0 0 16 16">
+<path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</summary>
+<div class="faq-answer">
+<div class="faq-answer-grid">
+<span aria-hidden="true" class="faq-answer-spacer">00</span>
+<p>Definitely. All participants receive a Certificate of Participation, which can be added to applications for private schools, international programmes and talent based scholarships. Creative extracurricular activities like the Global Youth Show are often seen as a strong addition to applications, especially for performing arts schools, gifted and talented tracks and competitive summer programmes. It shows confidence, public presence and involvement in creative development, qualities that stand out.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="ghl-hover-33" data-faq-item="3" style="border-bottom:1px solid #e8e8ea;transition:background .4s ease">
-<button aria-expanded="false" data-faq-toggle="3" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
-<span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">04</span>
-<span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Will my child be safe?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="3" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-</button>
-<div data-faq-answer="3" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
-<div style="min-height:0;overflow:hidden">
-<div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,44px);padding:0 0 clamp(28px,3.2vw,40px)">
-<span aria-hidden="true" style="font:400 11px/1.4 ui-monospace,Menlo,monospace;color:transparent">00</span>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,15.5px)/1.68 Inter,sans-serif; color: #4a4a4f; text-wrap: pretty; max-width: 900px">Absolutely. The young participants are our utmost priority. Our experienced staff are fully responsible from the time you drop them off until you pick them up. We have standard processes and procedures, always followed by trained staff, to ensure the wellbeing of every child at every step of their journey with us.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="ghl-hover-34" data-faq-item="4" style="border-bottom:1px solid #e8e8ea;transition:background .4s ease">
-<button aria-expanded="false" data-faq-toggle="4" style="appearance:none;width:100%;background:none;border:0;cursor:pointer;text-align:left;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(16px,3vw,44px);align-items:baseline;padding:clamp(24px,2.8vw,34px) 0" type="button">
-<span style="font:400 11px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#6e6e73">05</span>
-<span style="font:400 clamp(18px,2vw,26px)/1.22 'Bodoni Moda',serif;letter-spacing:-.01em;color:#1a1a1c;text-wrap:pretty">Will this help my child's education?</span>
-<svg aria-hidden="true" class="faq-chevron" data-faq-arrow="4" fill="none" viewbox="0 0 16 16"><path d="M3.5 5.75L8 10.25L12.5 5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-</button>
-<div data-faq-answer="4" style="display:grid;grid-template-rows:0fr;overflow:hidden;transition:grid-template-rows .5s cubic-bezier(.22,.61,.36,1),opacity .4s ease;opacity:0">
-<div style="min-height:0;overflow:hidden">
-<div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,44px);padding:0 0 clamp(28px,3.2vw,40px)">
-<span aria-hidden="true" style="font:400 11px/1.4 ui-monospace,Menlo,monospace;color:transparent">00</span>
-<p style="margin: 0; font: 400 clamp(14.5px,1.25vw,15.5px)/1.68 Inter,sans-serif; color: #4a4a4f; text-wrap: pretty; max-width: 900px">Definitely. All participants receive a Certificate of Participation, which can be added to applications for private schools, international programmes and talent based scholarships. Creative extracurricular activities like the Global Youth Show are often seen as a strong addition to applications, especially for performing arts schools, gifted and talented tracks and competitive summer programmes. It shows confidence, public presence and involvement in creative development, qualities that stand out.</p>
-</div>
-</div>
-</div>
-</div>
+</details>
 </div>
 <div style="display:flex;justify-content:flex-end;align-items:center;padding-top:clamp(24px,3vw,34px)">
 <a class="ghl-hover-35" data-scroll="#apply" href="#" style="display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border:1px solid #1a1a1c;border-radius:8px;background:#1a1a1c;color:#fafafa;font:500 11.5px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .3s ease,color .3s ease">GET IN TOUCH</a>
@@ -708,45 +724,16 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
     });
   }));
 
-  /* -------- FAQ: measured-height accordion -------- */
-  const faqToggles=qsa('[data-faq-toggle]');
-  function faqParts(idx){
-    const ans=qs('[data-faq-answer="'+idx+'"]');
-    return{ans,inner:ans?ans.firstElementChild:null,arrow:qs('[data-faq-arrow="'+idx+'"]'),item:ans?ans.closest('[data-faq-item]'):null};
-  }
-  function closeFaq(btn,immediate=false){
-    const idx=btn.getAttribute('data-faq-toggle'),p=faqParts(idx);
-    btn.setAttribute('aria-expanded','false');
-    if(p.item)p.item.classList.remove('is-open');
-    if(!p.ans)return;
-    if(immediate){p.ans.style.transition='none';p.ans.style.height='0px';p.ans.style.opacity='0';p.ans.offsetHeight;p.ans.style.transition='';return;}
-    const current=p.ans.getBoundingClientRect().height;
-    p.ans.style.height=current+'px';p.ans.style.opacity='1';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{p.ans.style.height='0px';p.ans.style.opacity='0';}));
-  }
-  function openFaq(btn,immediate=false){
-    const idx=btn.getAttribute('data-faq-toggle'),p=faqParts(idx);
-    btn.setAttribute('aria-expanded','true');
-    if(p.item)p.item.classList.add('is-open');
-    if(!p.ans||!p.inner)return;
-    const target=p.inner.scrollHeight;
-    if(immediate){p.ans.style.transition='none';p.ans.style.height=target+'px';p.ans.style.opacity='1';p.ans.offsetHeight;p.ans.style.transition='';return;}
-    p.ans.style.height='0px';p.ans.style.opacity='0';
-    p.ans.offsetHeight;
-    requestAnimationFrame(()=>{p.ans.style.height=target+'px';p.ans.style.opacity='1';});
-  }
-  function setFaq(openIndex,immediate=false){
-    faqToggles.forEach(btn=>{
-      const idx=btn.getAttribute('data-faq-toggle');
-      if(String(openIndex)===String(idx))openFaq(btn,immediate);else closeFaq(btn,immediate);
+  /* -------- FAQ: native mobile-safe accordion -------- */
+  const faqDetails=qsa('.faq-native');
+  faqDetails.forEach(detail=>{
+    detail.addEventListener('toggle',()=>{
+      if(!detail.open)return;
+      faqDetails.forEach(other=>{
+        if(other!==detail && other.open)other.removeAttribute('open');
+      });
     });
-  }
-  faqToggles.forEach(btn=>btn.addEventListener('click',()=>{
-    const idx=btn.getAttribute('data-faq-toggle');
-    const isOpen=btn.getAttribute('aria-expanded')==='true';
-    setFaq(isOpen?-1:idx,false);
-  }));
-  setFaq(0,true);
+  });
 
   /* -------- Counters -------- */
   const counterEls=qsa('[data-counter-target]');
@@ -920,7 +907,6 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
   function requestScrub(){if(!scrubRAF)scrubRAF=requestAnimationFrame(paintScrub);}
   function refreshLayout(){
     measureHeader();ensureExperienceRunways();scrubGroups.forEach(g=>g.last=-1);requestScrub();
-    faqToggles.forEach(btn=>{if(btn.getAttribute('aria-expanded')==='true'){const p=faqParts(btn.getAttribute('data-faq-toggle'));if(p.ans&&p.inner)p.ans.style.height=p.inner.scrollHeight+'px';}});
   }
 
   ensureExperienceRunways();paintScrub();
