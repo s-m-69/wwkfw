@@ -24,7 +24,7 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 ::selection{background:#e6e6e8} input,select,button{font-family:inherit}
 @keyframes wkfw-mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-@media (min-width:940px){[data-nav="desktop"]{display:flex!important}[data-nav="mobile-btn"]{display:none!important}#mobile-menu{display:none!important}}
+@media (min-width:940px){[data-nav="desktop"]{display:flex!important}[data-nav="mobile-btn"]{display:none!important}.mobile-menu-shell{display:none!important}#mobile-menu{display:none!important}}
 /* FAQ uses measured pixel height; reliable in mobile Chromium/WebView and GHL embeds. */
 [data-faq-answer]{display:block!important;height:0;overflow:hidden!important;opacity:0;transition:height .46s cubic-bezier(.22,.61,.36,1),opacity .28s ease!important;will-change:height,opacity}
 [data-faq-item].is-open{background:rgba(18,18,20,.018)}
@@ -130,21 +130,26 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
   html{scroll-padding-top:76px}
   body{overflow-x:hidden;-webkit-text-size-adjust:100%}
   body.menu-open{overflow:hidden}
+  body:has(.mobile-menu-shell[open]){overflow:hidden}
   a,button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 
   header{overflow:visible!important;z-index:100!important}
   header>div:first-child{min-height:64px;padding:10px 20px!important;gap:12px!important}
   header>div:first-child>a.ghl-hover-4[data-scroll="#apply"]{display:none!important}
+  .mobile-menu-shell{display:block!important;margin:0!important;padding:0!important}
   header [data-nav="mobile-btn"]{display:grid!important}
-  .mobile-menu-toggle{position:relative!important;display:grid!important;place-items:center!important;width:42px!important;height:42px!important;border-radius:50%!important;border:1px solid #d5d5d9!important;background:rgba(250,250,250,.86)!important;padding:0!important}
+  .mobile-menu-toggle{position:relative!important;display:grid!important;place-items:center!important;width:42px!important;height:42px!important;border-radius:50%!important;border:1px solid #d5d5d9!important;background:rgba(250,250,250,.86)!important;padding:0!important;cursor:pointer!important;list-style:none!important}
+  .mobile-menu-toggle::-webkit-details-marker{display:none!important}
+  .mobile-menu-toggle::marker{display:none!important;content:""!important}
   .hamburger{position:relative;width:16px;height:12px;display:block}
   .hamburger span{position:absolute;left:0;width:16px;height:1.5px;border-radius:2px;background:#18181a;transition:transform .34s cubic-bezier(.22,.61,.36,1),top .34s cubic-bezier(.22,.61,.36,1),opacity .2s ease}
   .hamburger span:first-child{top:2px}.hamburger span:last-child{top:8px}
-  .mobile-menu-toggle[aria-expanded="true"] .hamburger span:first-child{top:5px;transform:rotate(45deg)}
-  .mobile-menu-toggle[aria-expanded="true"] .hamburger span:last-child{top:5px;transform:rotate(-45deg)}
+  .mobile-menu-shell[open] .hamburger span:first-child{top:5px;transform:rotate(45deg)}
+  .mobile-menu-shell[open] .hamburger span:last-child{top:5px;transform:rotate(-45deg)}
 
   .mobile-menu-panel{display:block!important;position:fixed;left:0;right:0;top:var(--wkfw-hd,64px);bottom:0;z-index:95;background:rgba(247,247,248,.985);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);transition:opacity .28s ease,transform .36s cubic-bezier(.22,.61,.36,1),visibility 0s linear .36s;overflow:auto;overscroll-behavior:contain}
-  .mobile-menu-panel.is-open{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
+  .mobile-menu-panel.is-open,
+  .mobile-menu-shell[open] .mobile-menu-panel{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
   .mobile-menu-inner{min-height:100%;display:flex;flex-direction:column;padding:34px 22px max(26px,env(safe-area-inset-bottom))}
   .mobile-menu-kicker{margin:0 0 24px;font:500 10px/1 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#85858b}
   .mobile-menu-nav{border-top:1px solid #dbdbde}
@@ -272,9 +277,8 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <a class="ghl-hover-3" data-scroll="#why" href="#" style="font:500 12px/1 Inter,sans-serif;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;color:#4a4a4f;transition:color .25s ease,border-color .25s ease">FAQ</a>
 </nav>
 <a class="ghl-hover-4" data-scroll="#apply" href="#" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border:1px solid #1a1a1c;border-radius:8px;color:#1a1a1c;background:transparent;font:500 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s ease,color .3s ease">Apply now</a>
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="mobile-menu-toggle" data-nav="mobile-btn" id="mobile-menu-button" type="button"><span aria-hidden="true" class="hamburger"><span></span><span></span></span></button>
-</div>
-</header>
+<details class="mobile-menu-shell" id="mobile-menu-shell">
+<summary aria-controls="mobile-menu" aria-label="Open menu" class="mobile-menu-toggle" data-nav="mobile-btn" id="mobile-menu-button"><span aria-hidden="true" class="hamburger"><span></span><span></span></span></summary>
 <div aria-hidden="true" class="mobile-menu-panel" id="mobile-menu">
 <div class="mobile-menu-inner">
 <p class="mobile-menu-kicker">Explore the show</p>
@@ -287,6 +291,9 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
 <p class="mobile-menu-note">High Fashion | Global Cities &amp; Networks</p>
 </div>
 </div>
+</details>
+</div>
+</header>
 <main>
 <section style="position:relative;height:min(calc(100svh - var(--wkfw-hd,67px)),940px);min-height:440px;background:#0b0b0c;overflow:hidden">
 <div aria-label="Hero media placeholder" class="hero-media asset-placeholder hero-placeholder" data-asset="hero-media" style="position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#171719;overflow:hidden;transform-origin:center center;will-change:transform,opacity">
@@ -659,22 +666,26 @@ a{color:#1a1a1c;text-decoration:none;text-underline-offset:3px}
   measureHeader();
 
   /* -------- Mobile navigation -------- */
+  const menuShell=qs('#mobile-menu-shell');
   const menuBtn=qs('#mobile-menu-button');
   const menu=qs('#mobile-menu');
-  let menuOpen=false;
-  function setMenu(open){
-    if(!menuBtn||!menu)return;
-    menuOpen=!!open;
-    menu.classList.toggle('is-open',menuOpen);
-    menu.setAttribute('aria-hidden',String(!menuOpen));
-    menuBtn.setAttribute('aria-expanded',String(menuOpen));
-    menuBtn.setAttribute('aria-label',menuOpen?'Close menu':'Open menu');
+  let menuOpen=!!(menuShell&&menuShell.open);
+  function syncMenuState(){
+    menuOpen=!!(menuShell&&menuShell.open);
+    if(menu)menu.setAttribute('aria-hidden',String(!menuOpen));
+    if(menuBtn)menuBtn.setAttribute('aria-label',menuOpen?'Close menu':'Open menu');
     document.body.classList.toggle('menu-open',menuOpen);
   }
-  if(menuBtn&&menu){
-    menuBtn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();setMenu(!menuOpen);});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menuOpen)setMenu(false);});
-    if(navMQ&&navMQ.addEventListener) navMQ.addEventListener('change',e=>{if(!e.matches)setMenu(false);});
+  function setMenu(open){
+    if(!menuShell)return;
+    menuShell.open=!!open;
+    syncMenuState();
+  }
+  if(menuShell&&menu){
+    menuShell.addEventListener('toggle',syncMenuState);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menuShell.open)setMenu(false);});
+    if(navMQ&&navMQ.addEventListener)navMQ.addEventListener('change',e=>{if(!e.matches)setMenu(false);});
+    syncMenuState();
   }
 
   /* -------- Smooth in-page navigation -------- */
